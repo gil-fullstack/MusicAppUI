@@ -1,5 +1,5 @@
 [versions]
-agp = "8.6.1"
+agp = "8.7.1"
 kotlin = "1.9.0"
 coreKtx = "1.13.1"
 junit = "4.13.2"
@@ -13,6 +13,7 @@ material3 = "1.3.0"
 ui = "1.7.3"
 navigationRuntimeKtx = "2.8.3"
 navigationCompose = "2.8.3"
+uiTestAndroid = "1.7.3"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -35,6 +36,7 @@ material3 = { module = "androidx.compose.material3:material3", version.ref = "ma
 ui = { module = "androidx.compose.ui:ui", version.ref = "ui" }
 androidx-navigation-runtime-ktx = { group = "androidx.navigation", name = "navigation-runtime-ktx", version.ref = "navigationRuntimeKtx" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
+androidx-ui-test-android = { group = "androidx.compose.ui", name = "ui-test-android", version.ref = "uiTestAndroid" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
