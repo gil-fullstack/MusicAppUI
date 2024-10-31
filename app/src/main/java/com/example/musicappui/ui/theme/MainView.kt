@@ -68,7 +68,14 @@ fun MainView(modifier: Modifier = Modifier) {
     val title = remember {
         mutableStateOf(currentScreen.title)
     }
+
+//    val bottomBar: @Composable () -> Unit = {
+//        if(currentScreen is Screen.DrawerScreens || currentScreen == Screen.BottomScreens) {
+//
+//        }
+//    }
     Scaffold(
+        bottomBar = {},
         topBar = {
             TopAppBar(
                 title = { Text(title.value) },
