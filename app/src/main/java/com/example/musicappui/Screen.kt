@@ -3,14 +3,15 @@ package com.example.musicappui
 import androidx.annotation.DrawableRes
 
 sealed class Screen(val title: String, val route: String) {
-    sealed class BottomScreens(
+    sealed class BottomScreen(
         val bTitle: String,
         val bRoute: String,
         @DrawableRes    val icon: Int
     ):Screen(bTitle, bRoute)
     {
-            object Home : BottomScreens("Home", "home", R.drawable.baseline_home_24)
-            object Library : BottomScreens("liobrary", "library", R.drawable.baseline_library_add_24)
+            object Home : BottomScreen("Home", "home", R.drawable.baseline_home_24)
+            object Library : BottomScreen("Library", "library", R.drawable.baseline_library_add_24)
+            object Browse : BottomScreen("Browse", "browse", R.drawable.baseline_apps_24)
     }
 
     sealed class DrawerScreens(val dTitle: String, val dRoute: String, @DrawableRes val icon: Int) :
@@ -44,9 +45,10 @@ sealed class Screen(val title: String, val route: String) {
 
 }
 
-val screenInScreens = listOf(
-    Screen.BottomScreens.Home,
-    Screen.BottomScreens.Library
+val screensInBottom = listOf(
+    Screen.BottomScreen.Home,
+    Screen.BottomScreen.Library,
+    Screen.BottomScreen.Browse
 )
 
 val screenInDrawer = listOf(
